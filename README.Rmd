@@ -1,0 +1,15 @@
+---
+title: "Bayesian linear regression"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output:
+  md_document:
+    variant: markdown_github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Bayesian linear regresssion
+
