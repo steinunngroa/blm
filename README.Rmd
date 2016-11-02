@@ -31,7 +31,13 @@ This creates a new repository that lives at your own GitHub account. Your reposi
 
 You *can* pull any changes I make to this repository into your own version -- something I don't plan to have happen in this class -- but you cannot push your changes into my version. You don't have write permission to make changes to my code, after all.
 
-The typical pattern is instead to request from a repository maintainer that he or she pulls changes into the main repository from your fork. I won't do that either in this class, but we will use such pull requests as the way to hand in project exercises.
+If I *do* happen to make changes to this repository it will show up on the page of your repository just above the list of files.
+
+![Repository behind original](figures/behind.png)
+
+If this happens you can click the **Compare** button and switch brances to make a pull request to yourself that include my changes ... I don't expect it to happen, so that is all I will say about that.
+
+Since you cannot push your changes into repositories you do not control, the typical pattern is instead to request from a repository maintainer that he or she pulls changes into the main repository from your fork. I won't actually pull your code into this repository in this class, but we will use such pull requests as the way to hand in project exercises.
 
 ### Making pull requests
 
