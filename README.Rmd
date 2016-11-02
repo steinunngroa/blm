@@ -41,9 +41,45 @@ Since you cannot push your changes into repositories you do not control, the typ
 
 ### Making pull requests
 
+To make a pull request you push the **New Pull request** button.
+
+![New pull request](figures/new-pull-request.png)
+
+This takes you to a page that should look similar to the one shown below:
+
+![Pull request page](figures/new-pull-request-first-page.png)
+
+Here you simply have to press the **Create pull request** button. This will then send you to a page where you can describe the pull request.
+
+![Creating a pull request](figures/creating-pull-request.png)
+
+In this class you only need to make one such pull request, and I would prefer if the title you give it is your name -- that way I know which pull request was made by each one of you. Normaly, when sharing code on GitHub the pull request is used to describe that changes you have made to a repository and explain why you think it is worth merging into the main code base.
+
+Below the field for documentation there is another green button. Press this to actually create the pull request.
+
+![Create pull request button](figures/create-button.png)
+
+Creating the pull request now sends you to a page that looks like this:
+
+![New pull request](figures/pull-request.png)
+
+In your case you won't have the option of merging the pull request. I have that because I can modify both my own repository and this class repository. You will have a similar page, though. It shows the history of what you have done to your code and the comments you have made when creating the pull request.  There is also a message about code being checked. I describe that below.
+
+This pull request remains open until either I merge it into this repository -- which I do not plan to do -- or until you delete it. Don't delete it, though, since we will use it to hand in exercises. Whenever you push changes to your repository it will also show up on this pull request, so you now have an automatic way of submitting your handins. You just push changes to GitHub.
+
+(Strictly speaking it is only changes pushed to the branch that was used in the pull request, but since we are not using branches here it won't matter. You can just push your changes and they should show up on the pull request and I will be informed about them).
+
+I will use the pull request to comment on your code -- I can do that both by adding comment to individual code lines or through general comments, and I can even commit my own changes to your pull request -- and you can add comments to the pull request at any time.
 
 
 ### Continuous integration (CI)
 
 I have set up this package to use features of GitHub called *continuous integration*, which essentially means that whenever you push changes to the GitHub repository, GitHub will run a number of consistency checks. How to use this is beyond the scope of this class, so I will not explain it in detail. The consequence for you is that whenever you make a pull request GitHub will check the quality of your code. This will take a while since it first has to build a clean R installation, then install all the R packages your package relies on, and then run your unit tests and check your package. After that, though, the pull request will be extended with the result of these tests.
+
+The message shown above about the code still being checked is a consequence of that. If the tests pass, it will turn into a message that looks like this:
+
+![Passed CI](figures/passed-CI.png)
+
+The checks made for this repository is just the unit tests you write and a package consistency check. You should always try to make sure that when you hand in a pull request, these automatic tests are passed. You might not be able to guarantee it, since you cannot see the consquences of the changes until you push them, but if you see that the checks are failing you should fix them. If the automatic tests complain about your code it is a safe bet that I will complain about it as well.
+
 
