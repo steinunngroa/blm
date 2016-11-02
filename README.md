@@ -68,3 +68,17 @@ The message shown above about the code still being checked is a consequence of t
 ![Passed CI](figures/passed-CI.png)
 
 The checks made for this repository is just the unit tests you write and a package consistency check. You should always try to make sure that when you hand in a pull request, these automatic tests are passed. You might not be able to guarantee it, since you cannot see the consquences of the changes until you push them, but if you see that the checks are failing you should fix them. If the automatic tests complain about your code it is a safe bet that I will complain about it as well.
+
+If you want to connect the checking to your own repositories you can do so using [TravisCI](http://www.travis-ci.com). You can sign in using your github account and then connect the repositories you want to have checked. You can read the Travis documentation for details.
+
+After your pull request is checked, I have set up a coverage check. This checks how much of your code is actually run by your unit tests. The result of this check shows up a little after the checks have passed, and if 100% of your code is covered it should look like this:
+
+![Full coverage](figures/full-coverage.png)
+
+This coverage check is run by TravisCI but analysed by [Coveralls](https://coveralls.io/). If you want to set it up for your own repositories you can go there, again you can sign in using your GitHub account and then select which repositories it should have access to. By itself this doesn't set up the coverage test, this has to be done through TravisCI, but you can read the documentation for how to do it (or look at the `.travis.yml` file in this repository).
+
+If you do not achieve 100% coverage you will be shown how much (or how little) coverage you are reaching.
+
+![Low coverage](figures/no-coverage.png)
+
+If your test coverage is low, it means that you are not really testing your code, so you should always aim at getting as close to 100% as you possibly can.
