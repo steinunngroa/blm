@@ -96,5 +96,17 @@ If you do not achieve 100% coverage you will be shown how much (or how little) c
 
 If your test coverage is low, it means that you are not really testing your code, so you should always aim at getting as close to 100% as you possibly can.
 
+To get a report of the coverage of your tests you can install the package `covr` and use
 
+```r
+library(covr)
+package_coverage()
+```
+
+or get a window with the report using
+
+```r
+library(covr)
+shine(package_coverage())
+```
 
