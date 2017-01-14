@@ -2,10 +2,10 @@ Package: blm
 Type: Package
 Title: Bayesian Linear Regression
 Version: 0.1.0
-Date: 2016-11-02
-Authors@R: person("Firstname", "Lastname", email = "your@mail.address", role = c("cre", "aut"))
+Date: 2017-16-01
+Authors@R: person("Firstname", "Lastname", email = "steinunngroa@gmail.com", role = c("cre", "aut"))
 Description: Package for fitting Bayesian linear models.
-License: GPL-2
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Suggests:

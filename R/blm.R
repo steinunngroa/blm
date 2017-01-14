@@ -1,47 +1,22 @@
-
 #' Bayesian linear model.
 #'
 #' Fits a model, given as a formula, optionally with data provided through the "..." parameter.
 #'
 #' @param model   A formula describing the model.
-#' @param ...     Additional data, for example a data frame. Feel free to add other options.
-#'
+#' @param prior   A prior distribution
+#' @param beta    aaaaaaaaa
+#' @param ...     Additional data.
 #' @return A fitted model.
+#' @import stats
 #' @export
-#'
-#' ## Bayesian linear regresssion
-blm <- function(model, alpha, beta, data, ...) {
-  phi <- model.matrix(model, data)
-  S <- solve(diag(alpha, nrow = ncol(phi)) + beta*t(phi) %*% phi)
-  mxy <- beta * S %*% t(phi) %*% model.response(model.frame(model, data))
-  structure(list(sigma = S, mean = mxy, data = data, model=model), class="blm")
+blm <- function(model, prior, beta, ...) {
+  if(beta < 0) stop("beta must be a positive number")
+
+  posterior <- update(model, prior, beta, ...)
+  structure(list(Sigma = posterior$Sigma, mean = posterior$m, beta = beta, data = posterior$data, model=model, prior=prior, posterior=posterior, Call = sys.call()), class="blm")
 }
 
-#test= blm(y ~ x+I(x^2), 1, 1, data.frame(x=x, y=x))
 
 
-predict.blm <- function(blmModel) {
-  phi = model.matrix(blmModel$model, blmModel$data)
-  m = blmModel$mean
-  S = blmModel$sigma
-
-  apply(phi, 1, function(row) t(m)%*%row)
-}
-
-#predict(test)
 
 
-#
-#
-# ```r
-# library(covr)
-# package_coverage()
-# ```
-#
-# or get a window with the report using
-#
-# ```r
-# library(covr)
-# shine(package_coverage())
-# ```
-#
