@@ -4,12 +4,14 @@
 \alias{predict.blm}
 \title{Make a prediction}
 \usage{
-\method{predict}{blm}(object, ...)
+\method{predict}{blm}(object, newdata, ...)
 }
 \arguments{
 \item{object}{A blm model}
 
-\item{...}{Some random dataset}
+\item{newdata}{Data do be used}
+
+\item{...}{Some extra inputs}
 }
 \value{
 a prediction

@@ -3,7 +3,8 @@
 #' This function makes a prediction for a blm, given some data.
 #'
 #' @param object A blm model
-#' @param ... Some dataset
+#' @param newdata Data do be used
+#' @param ... Some extra inputs
 #' @return a prediction
 #' @import stats
 #' @export
