@@ -15,6 +15,6 @@
 A list of coefficients
 }
 \description{
-This function returns fitted parameters of the model.
+This function returns the parameters of the model.
 }
 

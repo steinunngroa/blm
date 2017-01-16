@@ -11,7 +11,7 @@ blm(model, prior, beta, ...)
 
 \item{prior}{A prior distribution}
 
-\item{beta}{aaaaaaaaa}
+\item{beta}{The precision}
 
 \item{...}{Additional data.}
 }
