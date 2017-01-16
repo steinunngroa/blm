@@ -4,9 +4,7 @@
 #'
 #' @param model A model function, fx. y ~ x + z
 #' @param data_frame Some dataframe
-#' @return a prior distribution
-#'
-#' @export
+#' @return a model matrix without a response variable
 
 model_matrix_responseless <- function(model, data_frame) {
   if(is.null(model) || is.null(data_frame)) stop("Must provide input")

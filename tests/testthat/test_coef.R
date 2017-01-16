@@ -1,6 +1,6 @@
 context("coef")
 
-test_that("testing the function coef.blm", {
+test_that("testing that we can extract the coefficients from a blm", {
   # Making of random data for the test
   alpha = 1; beta = 0.2;
   w0 = 0.2; w1 = 0.1; w2 = 0.5;

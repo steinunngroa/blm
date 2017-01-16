@@ -5,10 +5,9 @@
 #' @param model A model function, fx. y ~ x + z
 #' @param prior A prior distribution including a Sigma
 #' @param beta The precision
-#' @param ... Extra data.
+#' @param ... Additional data
 #' @return A list with Sigma, mean and data for a posterior distribution
 #' @import stats
-#' @export
 
 update <- function(model, prior, beta, ...) {
   if(beta < 0) stop("beta must be a positive number")

@@ -12,7 +12,7 @@
 \item{...}{Some extra data (not used)}
 }
 \value{
-a plot of the blm
+a plot of the residuals vs fitted results of a blm
 }
 \description{
 This function produces a plot for a given blm.

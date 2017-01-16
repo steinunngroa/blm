@@ -19,6 +19,6 @@
 Confidence intervals
 }
 \description{
-This function finds the confidence intervals for the fitted parameters.
+This function finds the confidence intervals for the blm fitted parameters.
 }
 

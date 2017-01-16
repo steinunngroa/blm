@@ -9,12 +9,12 @@
 \arguments{
 \item{object}{A blm model}
 
-\item{...}{Extra parameters}
+\item{...}{Some data}
 }
 \value{
 A list of coefficients
 }
 \description{
-This function returns the parameters of the model.
+This function returns the fitted parameters of the model.
 }
 

@@ -9,7 +9,7 @@
 \arguments{
 \item{object}{A blm model}
 
-\item{...}{some data (not used)}
+\item{...}{some additional data}
 }
 \value{
 The residuals

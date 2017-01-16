@@ -7,7 +7,7 @@
 blm(model, prior, beta, ...)
 }
 \arguments{
-\item{model}{A formula describing the model.}
+\item{model}{A formula describing the model}
 
 \item{prior}{A prior distribution}
 
@@ -19,6 +19,6 @@ blm(model, prior, beta, ...)
 A fitted model.
 }
 \description{
-Fits a model, given as a formula, optionally with data provided through the "..." parameter.
+The function fits a blm model, using a model formula, and optional additional data.
 }
 

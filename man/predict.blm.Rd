@@ -17,6 +17,6 @@
 a prediction
 }
 \description{
-This function makes a prediction for a blm, given some data.
+This function makes a prediction based on the fitted model.
 }
 

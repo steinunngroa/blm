@@ -12,7 +12,7 @@ model_matrix_responseless(model, data_frame)
 \item{data_frame}{Some dataframe}
 }
 \value{
-a prior distribution
+a model matrix without a response variable
 }
 \description{
 This function removes the response variable from a matrix and returns a responseless matrix.

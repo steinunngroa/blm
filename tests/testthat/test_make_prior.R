@@ -1,6 +1,6 @@
 context("make_prior")
 
-test_that("testing the function make_prior", {
+test_that("testing that we can create a prior distribution", {
   # Making of random data for the test
   alpha = 1; beta = 0.2;
   w0 = 0.2; w1 = 0.1; w2 = 0.5;

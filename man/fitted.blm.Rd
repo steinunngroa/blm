@@ -9,7 +9,7 @@
 \arguments{
 \item{object}{A blm model}
 
-\item{...}{Some extra data(not used)}
+\item{...}{Some extra data}
 }
 \value{
 Fitted results

@@ -4,15 +4,16 @@
 #'
 #' @param x A blm model
 #' @param ... Some extra data (not used)
-#' @return a plot of the blm
+#' @return a plot of the residuals vs fitted results of a blm
 #'
 #' @export
 
 plot.blm <- function(x, ...){
   dataframe <- data.frame(fitted = fitted(x)$Prediction, res = residuals(x), Number = 1:nrow(residuals(x)))
   newdataframe <- dataframe[order(dataframe$fitted),]
-  plot(newdataframe$fitted, newdataframe$res, type="l", col="blue",
+  plot(newdataframe$fitted, newdataframe$res, type = "p", col="blue",
        main="Residuals vs. Fitted",
        xlab="Fitted",
        ylab="Residuals")
+
 }

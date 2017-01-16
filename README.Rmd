@@ -16,9 +16,77 @@ library(graphics)
 
 ### A Bayesian Linear Regression package
 
-Bayesian linear regression is a way of doing linear regression, where bayesian statistics are used to do the prediction. 
+Bayesian linear regression is a way of doing linear regression, were bayesian statistics are used to do the prediction.
 
-This package is built in R to do Bayesian linear regression, as a part of the course: Data Science in Bioinformatics: Software Development and Testing, in Aarhus University 2016. The goal of the project was to see the various aspects that go into building an R package. 
+This package is built in RStudio to do Bayesian linear regression, as a part of the course "Data Science in Bioinformatics: Software Development and Testing", in Aarhus University 2016. The goal of the project was to see the various aspects that go into building an R package. 
+
+### Installation and usage
+First, install the devtools package. Then install the blm package from Github: install_github("steinunngroa/blm").
+
+### Functions
+There are 10 functions available for users of the package. To get information on each function and the usage, type into Rstudio: ?function_name.blm, for example ?deviance.blm. .
+
+- blm()
+  The function fits a blm model, using a model formula, and optional additional data.
+- coef() 
+	This function returns the fitted parameters of the model.
+- confint()
+	This function finds the confidence intervals for the blm fitted parameters.
+- fitted()
+  This function produces fitted response variables.
+- residuals()
+	This function returns the residuals of a blm.
+- deviance()
+  This function finds the deviance for a blm.
+- plot()
+  This function produces a plot for a given blm.
+- predict()
+	This function makes a prediction based on the fitted model.
+- print() 
+  This function prints out a summary of a blm model
+- summary()
+  This function gives a summary of a blm regression model, using the print.blm function.
 
 
+Then there are three support functions used. One to make a prior, another to update to a posterior and the third to give a responseless model matrix. 
 
+- make_prior()
+	This function produces a prior distribution, using the parameter alpha and the model given as input.
+- update()
+	This function updates a prior distribution, to get the posterior distribution.
+- model_matrix_responseless()
+  This function removes the response variable from a matrix and returns a responseless matrix.
+  
+### Example of usage
+
+```{r}
+# Making of random data for the test
+alpha = 1; beta = 1;
+w0 = 0.4; w1 = 0.2; w2 = 0.1;
+d1 = data.frame(x=rnorm(100), z = rnorm(100));
+d1$y = rnorm(100, w0-w1*d1$x+w2*d1$z, 1/beta)
+m1 = y ~ x + z
+
+# Using make_prior and blm to construct a valid blm
+prior1 = make_prior(m1, alpha)
+blm1 = blm(m1, prior1, beta, d1)
+
+# Using coef, confint and fitted
+coef1 = coef(blm1)
+confint1 = confint(blm1, c("(Intercept)", "x", "z"), level = 0.9)
+fit1 = fitted(blm1)
+
+# Showing usage of residuals, deviance and predict
+res1 = residuals(blm1)
+dev1 = deviance(blm1)
+pred1 = predict(blm1, d1)
+
+# Printing, plotting and doing a summary
+print(blm1)
+plot(blm1)
+summary(blm1)
+```
+
+## Reference
+
+Mailund, T. "Introduction to Data Science and Statistical Programming in R"

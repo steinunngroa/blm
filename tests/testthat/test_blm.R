@@ -1,6 +1,6 @@
 context("blm")
 
-test_that("We can fit blm objects", {
+test_that("We can create blm objects", {
   # Making of random data for the test
   alpha = 1; beta = 0.2;
   w0 = 0.2; w1 = 0.1; w2 = 0.5;

@@ -3,7 +3,7 @@
 #' This function returns the residuals of a blm.
 #'
 #' @param object A blm model
-#' @param ... some data (not used)
+#' @param ... some additional data
 #' @return The residuals
 #' @import stats
 #' @export
@@ -14,5 +14,3 @@ residuals.blm = function(object, ...) {
   predicted = fitted(object)$Prediction
   return(predicted-observed)
 }
-
-#residuals(test1)

@@ -3,7 +3,7 @@
 #' This function produces fitted response variables.
 #'
 #' @param object A blm model
-#' @param ... Some extra data(not used)
+#' @param ... Some extra data
 #' @return Fitted results
 #' @import stats
 #' @export

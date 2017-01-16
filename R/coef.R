@@ -1,9 +1,9 @@
 #' Find coefficients for blm
 #'
-#' This function returns the parameters of the model.
+#' This function returns the fitted parameters of the model.
 #'
 #' @param object A blm model
-#' @param ... Extra parameters
+#' @param ... Some data
 #' @return A list of coefficients
 #’
 #' @export

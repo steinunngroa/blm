@@ -13,7 +13,7 @@ update(model, prior, beta, ...)
 
 \item{beta}{The precision}
 
-\item{...}{Extra data.}
+\item{...}{Additional data}
 }
 \value{
 A list with Sigma, mean and data for a posterior distribution

@@ -1,6 +1,6 @@
 context("model_matrix_responseless")
 
-test_that("testing the model_matrix_responseless function", {
+test_that("testing that we can build a responseless model matrix", {
 
   # Making of random data for the test
   alpha = 1; beta = 0.2;

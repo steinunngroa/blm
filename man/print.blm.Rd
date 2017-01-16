@@ -15,6 +15,6 @@
 A printed summary of the blm object.
 }
 \description{
-Gives a printed summary of the parameters of a blm model.
+Gives a printed summary of a blm model.
 }
 

@@ -1,8 +1,8 @@
 #' Bayesian linear model.
 #'
-#' Fits a model, given as a formula, optionally with data provided through the "..." parameter.
+#' The function fits a blm model, using a model formula, and optional additional data.
 #'
-#' @param model   A formula describing the model.
+#' @param model   A formula describing the model
 #' @param prior   A prior distribution
 #' @param beta    The precision
 #' @param ...     Additional data.
@@ -13,7 +13,15 @@ blm <- function(model, prior, beta, ...) {
   if(beta < 0) stop("beta must be a positive number")
 
   posterior <- update(model, prior, beta, ...)
-  return(structure(list(Sigma = posterior$Sigma, mean = posterior$m, beta = beta, data = posterior$data, model=model, prior=prior, posterior=posterior, Call = sys.call()), class="blm"))
+  return(structure(list(Sigma = posterior$Sigma,
+                        mean = posterior$m,
+                        beta = beta,
+                        data = posterior$data,
+                        model=model,
+                        prior=prior,
+                        posterior=posterior,
+                        Call = sys.call()),
+                   class="blm"))
 }
 
 

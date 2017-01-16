@@ -1,6 +1,6 @@
 context("confint")
 
-test_that("Testing confint.blm", {
+test_that("Testing that we can provide the confidence interval", {
   # Making of random data for the test
   alpha = 1; beta = 0.2;
   w0 = 0.2; w1 = 0.1; w2 = 0.5;
@@ -19,5 +19,4 @@ test_that("Testing confint.blm", {
 
   # Testing the dimensions of the output
   expect_true(all(dim(confint1$mean) == c(3,1)))
-
 })

@@ -7,16 +7,16 @@
 make_prior(model, alpha, givenmean = c(0, 0))
 }
 \arguments{
-\item{model}{A model function, fx. y ~ x + z}
+\item{model}{A model formula, fx. y ~ x + z.}
 
-\item{alpha}{A}
+\item{alpha}{The prior precision.}
 
-\item{givenmean}{....}
+\item{givenmean}{The selected mean for the distribution.}
 }
 \value{
-a prior distribution
+The covariance matrix, number of variables and the mean of the prior distribution.
 }
 \description{
-This function produces a prior distribution.
+This function produces a prior distribution, using alpha and the model.
 }
 

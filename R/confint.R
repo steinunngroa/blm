@@ -1,6 +1,6 @@
 #' Find confidence intervals
 #'
-#' This function finds the confidence intervals for the fitted parameters.
+#' This function finds the confidence intervals for the blm fitted parameters.
 #'
 #' @param object A blm model
 #' @param parm Number of parameters

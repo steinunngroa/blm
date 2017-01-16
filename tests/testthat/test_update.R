@@ -1,6 +1,6 @@
 context("update")
 
-test_that("testing the update function", {
+test_that(" we can update a prior with new data and obtain a posterior", {
 
   # Making of random data for the test
   alpha = 1; beta = 0.2;
